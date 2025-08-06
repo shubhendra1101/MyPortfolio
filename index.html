@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shubhendra Singh - Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Playfair+Display:wght@600;800&family=Cinzel:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Quicksand", sans-serif;
+        font-size: 1.075rem;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Cinzel", serif;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .gradient-bg {
+        background: linear-gradient(135deg, #100016bb, #4a0264ac);
+      }
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 1s ease forwards;
+      }
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .bubble:hover,
+      .card:hover,
+      button:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease;
+      }
+      .cross-bubble {
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 0.5rem;
+      }
+      .cross-bubble div {
+        grid-column: 2;
+      }
+      .cross-bubble div:nth-child(1) {
+        grid-row: 1;
+      }
+      .cross-bubble div:nth-child(2) {
+        grid-row: 2;
+        grid-column: 1;
+      }
+      .cross-bubble div:nth-child(3) {
+        grid-row: 2;
+        grid-column: 2;
+      }
+      .cross-bubble div:nth-child(4) {
+        grid-row: 2;
+        grid-column: 3;
+      }
+      .cross-bubble div:nth-child(5) {
+        grid-row: 3;
+      }
+
+      /* Global reveal animation */
+      section {
+        animation: fadeInUp 1.2s ease-in-out both;
+      }
+      section:nth-of-type(odd) {
+        animation-delay: 0.1s;
+      }
+      section:nth-of-type(even) {
+        animation-delay: 0.3s;
+      }
+
+      .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: scale(1.03);
+        box-shadow: 0 10px 20px rgba(21, 21, 21, 0.436);
+      }
+
+      button {
+        transition: transform 0.3s ease, background 0.3s ease;
+      }
+      button:hover {
+        transform: scale(1.05);
+        background: #d81515;
+      }
+
+      h1,
+      h2,
+      h3 {
+        animation: textGlow 2s ease-in-out infinite alternate;
+      }
+
+      @keyframes textGlow {
+        0% {
+          text-shadow: 0 0 5px #d38080, 0 0 10px #9d477a, 0 0 15px #3b383a;
+        }
+        100% {
+          text-shadow: 0 0 10px #4e4949, 0 0 20px #92426e, 0 0 30px #797276;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="bg-cover bg-center text-white px-4 md:px-24"
+    style="background-image: url('2c01d349c9d0f86fe13ed3f4f237cd7d.png')"
+  >
+    <!-- Header -->
+    <section
+      class="gradient-bg relative p-6 rounded-xl overflow-hidden fade-in mt-5"
+    >
+      <img
+        src="1695976249580.png"
+        class="absolute inset-0 w-full h-full object-cover opacity-40 z-0"
+        alt="bg"
+      />
+
+      <div
+        class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-10 py-12 px-4 md:px-24"
+      >
+        <!-- LEFT: Name & Buttons -->
+        <div class="md:w-2/3 space-y-6 text-center md:text-left">
+          <h1
+            class="text-4xl md:text-5xl font-bold leading-tight drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]"
+          >
+            Shubhendra <br />
+            Singh
+          </h1>
+          <p class="text-base">
+            Innovating through Code | Full-Stack Developer
+          </p>
+          <div
+            class="mt-4 flex flex-wrap gap-4 justify-center md:justify-start"
+          >
+            <a
+              href="#contact"
+              class="bg-gray-700 text-white px-5 py-2 rounded-lg shadow-md hover:bg-red-600 transition card"
+              >Contact Me</a
+            >
+            <a
+              href="https://www.linkedin.com/in/shubhendra-singh-bb8ba028b"
+              target="_blank"
+              class="bg-gray-700 text-white px-5 py-2 rounded-lg shadow-md hover:bg-red-600 transition card"
+              >LinkedIn</a
+            >
+            <a
+              href="#projects"
+              class="bg-gray-700 text-white px-5 py-2 rounded-lg shadow-md hover:bg-red-600 transition card"
+              >Projects</a
+            >
+            <a
+              href="#education"
+              class="bg-gray-700 text-white px-5 py-2 rounded-lg shadow-md hover:bg-red-600 transition card"
+              >Education</a
+            >
+          </div>
+        </div>
+
+        <!-- RIGHT: Profile Image -->
+        <div class="w-48 h-48 md:w-56 md:h-56 flex-shrink-0">
+          <img
+            src="WhatsApp Image 2025-08-06 at 13.49.27_23adab19.jpg"
+            alt="Profile"
+            class="rounded-xl w-full h-full object-cover border-4 border-[#E377B7] card"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Summary -->
+    <section class="gradient-bg rounded-xl my-10 p-8 fade-in">
+      <h2 class="text-4xl font-bold mb-4 text-center">Summary</h2>
+      <p class="text-sm mb-6 text-center max-w-3xl mx-auto">
+        I'm a BTech Computer Science student, specializing in AI & ML at KIET
+        Group of Institutions. Skilled in coding, development, and
+        problem-solving, always seeking better ways to approach challenges and
+        build innovative projects.
+      </p>
+      <div class="bg-[#2E2542] p-6 rounded-xl max-w-3xl mx-auto">
+        <h3 class="text-xl font-bold mb-2">Skills</h3>
+        <ul class="grid grid-cols-2 gap-3 text-sm list-disc list-inside">
+          <li>DSA</li>
+          <li>HTML, CSS, JS</li>
+          <li>ES6, Node.js, Express.js</li>
+          <li>C, C++, Python</li>
+          <li>SQL, MongoDB</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Top Skills -->
+    <section
+      id="skills"
+      style="
+        background: linear-gradient(135deg, #820b64, #0c0159);
+        padding: 50px 0;
+        border-radius: 15px;
+      "
+    >
+        <img
+        src="1695976249580.png"
+        class="absolute inset-0 w-full h-full object-cover opacity-5 z-0"
+        alt="education background"
+      />
+      <h2
+        style="
+          text-align: center;
+          color: rgb(255, 255, 255);
+          font-size: 2em;
+          font-weight: bold;
+          margin-bottom: 50px;
+        "
+      >
+        Top Skills
+      </h2>
+      <div class="skills-bubble-container">
+        <div class="skill-bubble bubble1">Web Development</div>
+        <div class="skill-bubble bubble2">Programming<br />Languages</div>
+        <div class="skill-bubble bubble3">Database<br />Management</div>
+        <div class="skill-bubble bubble4">AI/ML</div>
+      </div>
+    </section>
+
+    <style>
+      .skills-bubble-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 30px;
+        flex-wrap: wrap;
+        padding: 0 20px;
+      }
+
+      .skill-bubble {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-weight: bold;
+        color: #0a001f;
+        border-radius: 50%;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .bubble1 {
+        width: 250px;
+        height: 250px;
+        background-color: #b35e98;
+      }
+
+      .bubble2 {
+        width: 200px;
+        height: 200px;
+        background-color: #c87db0;
+      }
+
+      .bubble3 {
+        width: 170px;
+        height: 170px;
+        background-color: #daa9cb;
+      }
+
+      .bubble4 {
+        width: 140px;
+        height: 140px;
+        background-color: #e8c9e0;
+      }
+
+      @media screen and (max-width: 768px) {
+        .skills-bubble-container {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+
+    <!-- Education -->
+    <section
+      class="bg-[#1C1333] rounded-xl my-12 py-12 px-6 fade-in relative overflow-hidden"
+      id="education"
+    >
+      <h2 class="text-4xl font-bold mb-6 text-center">Education</h2>
+      <img
+        src="1695976249580.png"
+        class="absolute inset-0 w-full h-full object-cover opacity-40 z-0 card"
+        alt="education background"
+      />
+      <div
+        class="relative z-10 max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8"
+      >
+        <img
+          src="1687164363phpjopSjv.png"
+          class="rounded-lg shadow-lg"
+          alt="College"
+        />
+        <div class="text-left space-y-2">
+          <h2 class="text-4xl font-bold">KIET Group of Institutions</h2>
+          <p>Graduation Year: 2027</p>
+          <p>Bachelor of Technology - BTech, Computer Science : AI & ML</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="gradient-bg rounded-xl py-12 px-6 my-10 fade-in">
+      <h2 class="text-4xl font-bold mb-6 text-center">Certifications</h2>
+      <div class="grid gap-6 max-w-3xl mx-auto">
+        <div class="flex gap-4 items-start card">
+          <span class="bg-[#9C5D89] px-4 py-2 rounded-lg font-bold">1</span>
+          <p>Generative AI</p>
+        </div>
+        <div class="flex gap-4 items-start card">
+          <span class="bg-[#9C5D89] px-4 py-2 rounded-lg font-bold">2</span>
+          <p>IBM SQL and Relational Databases 101</p>
+        </div>
+        <div class="flex gap-4 items-start card">
+          <span class="bg-[#9C5D89] px-4 py-2 rounded-lg font-bold">3</span>
+          <p>Deloitte Technology Job Simulation</p>
+        </div>
+        <div class="flex gap-4 items-start card">
+          <span class="bg-[#9C5D89] px-4 py-2 rounded-lg font-bold">4</span>
+          <p>Palo Alto Cybersecurity Foundation</p>
+        </div>
+        <div class="flex gap-4 items-start card">
+          <span class="bg-[#9C5D89] px-4 py-2 rounded-lg font-bold">5</span>
+          <p>Goldman Sachs SE Job Simulation</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section
+      class="gradient-bg rounded-xl py-14 px-6 my-12 fade-in"
+      id="projects"
+    >
+      <h2 class="text-4xl font-bold mb-10 text-center">Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div class="bg-[#3A2B4C] p-6 rounded-xl shadow-xl card">
+          <h3 class="text-xl font-bold">Task Manager</h3>
+          <p class="text-xl mt-1">
+            <strong>Tech Stack:</strong> Node.js, Express.js, MongoDB, EJS
+          </p>
+          <p class="text-s mt-3">
+            A full-stack application for managing tasks, allowing users to
+            create, update, and delete tasks efficiently.
+          </p>
+          <a
+            href="https://github.com/shubhendra1101/TaskManager"
+            target="_blank"
+            class="inline-block mt-6 bg-gray-700 px-6 py-2 rounded shadow-md hover:bg-gray-600 transition duration-300 transform hover:scale-105"
+          >
+            GitHub
+          </a>
+        </div>
+        <div class="bg-[#3A2B4C] p-6 rounded-xl shadow-xl card">
+          <h3 class="text-xl font-bold">GuessTheNumber</h3>
+          <p class="text-m mt-1">
+            <strong>Tech Stack:</strong> HTML, CSS, JavaScript
+          </p>
+          <p class="text-s mt-3">
+            An interactive number guessing game (1-20) with real-time feedback,
+            high score tracking, and replay functionality.
+          </p>
+          <a
+            href="https://github.com/shubhendra1101/GuessTheNumber"
+            target="_blank"
+            class="inline-block mt-6 bg-gray-700 px-6 py-2 rounded shadow-md hover:bg-gray-600 transition duration-300 transform hover:scale-105"
+          >
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="py-14 px-6 my-12 fade-in rounded-lg" id="contact">
+      <h2 class="text-3xl font-bold mb-4 text-center">Contact</h2>
+      <p class="text-m font-bold text-center text-black">
+        Feel free to reach out for collaborations or inquiries!
+      </p>
+      <ul class="mt-4 text-sm text-center space-y-2 font-bold">
+        <a href="https://www.linkedin.com/in/shubhendra-singh-bb8ba028b"
+          >🔗 LinkedIn</a
+        >
+        <li>📞 +91 8840600302</li>
+        <li>📍 Delhi-NCR</li>
+      </ul>
+      <div class="text-center mt-4">
+        <a
+          href="mailto:shubhendra1019@gmail.com"
+          class="inline-block mt-6 bg-red-600 px-6 py-2 rounded shadow-md hover:bg-red-800 transition duration-300 transform hover:scale-105"
+          >Send Email</a
+        >
+      </div>
+    </section>
+    <p class="text-center text-xx bg-[#2f2e2e] -mx-4 md:-mx-24 w-screen">
+      © Shubhendra. All rights reserved
+    </p>
+    <!-- Back to Top Button -->
+    <a
+    href="#"
+    class="fixed bottom-8 right-6 bg-blue-800 text-white w-10 h-10 flex items-center justify-center rounded-full shadow-lg hover:bg-pink-700 transition duration-300 z-50"
+    title="Back to Top"
+    >
+    ↑
+    </a>
+  </body>
+</html>
